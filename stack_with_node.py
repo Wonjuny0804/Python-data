@@ -10,7 +10,7 @@ class Node(object):
 class Stack(object):
     def __init__(self):
         self.head = None
-        self.pointer = pointer
+        self.count = 0
 
     def isEmpty(self):
         return not bool(self.head)
