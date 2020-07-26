@@ -21,7 +21,7 @@ class LinkedQueue(object):
         else:
             print("Queue is empty.")
 
-    def enqueue(self):
+    def enqueue(self, value):
         node = Node(value)
         if not self.head:
             self.head = node
