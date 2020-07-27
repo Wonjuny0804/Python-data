@@ -29,8 +29,7 @@ class Heapify(object):
         largest = (left < n and self.data[left] > self.data[i]) and left or i
         
         # The right child
-        largest = (right < n and self.data[right] > self.data[largest]) and \ 
-        right or largest
+        largest = (right < n and self.data[right] > self.data[largest]) and right or largest
 
         #if the current node is bigger than child then skip, else Swap
         if i is not largest:
@@ -65,4 +64,4 @@ def test_heapify():
     print("Testified!")
 
 if __name__ == "__main__":
-    
+    test_heapify()
