@@ -1,4 +1,4 @@
-import headq
+import heapq
 
 class PriorityQueue(object):
     def __init__(self):
@@ -6,11 +6,11 @@ class PriorityQueue(object):
         self._index = 0
 
     def push(self, item, prioirty):
-        heapq.heappush(self._queue, self._index, item))
+        heapq.heappush(self._queue,(-prioirty, self._index, item))
         self._index += 1
 
     def pop(self):
-        return heapq.heappop(self.queue)[-1]
+        return heapq.heappop(self._queue)[-1]
 
 class Item:
     def __init__(self, name):
