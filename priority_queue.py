@@ -6,7 +6,7 @@ class PriorityQueue(object):
         self._index = 0
 
     def push(self, item, prioirty):
-        headq.heappush(self._queue, self._index, item))
+        heapq.heappush(self._queue, self._index, item))
         self._index += 1
 
     def pop(self):
