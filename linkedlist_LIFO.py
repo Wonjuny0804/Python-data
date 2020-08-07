@@ -21,4 +21,8 @@ class LinkedListLIFO(object):
         else:
             prev.pointer = node.pointer
 
-        
+    # 새 노드를 추갛낟.  다음 노드를 헤드를 가리키고, 
+    # 헤드는 새 노드를 가리킨다. 
+    def _add(self, value):
+        self.length += 1
+        self.head = Node(value, self.head)
