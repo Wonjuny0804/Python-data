@@ -15,7 +15,7 @@ class Node(object):
     def setNext(self, newpointer):
         self.pointer = newpointer
 
-if __name__ = "__main__":
+if __name__ == "__main__":
     L = Node("a", Node("b", Node("c", Node("d"))))
     assert(L.pointer.pointer.value=="c")
 
