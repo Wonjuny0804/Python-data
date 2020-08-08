@@ -39,11 +39,17 @@ class LinkedListLIFO(object):
 
     # 값으로 노드를 찾는다.
     def _find_by_value(self, value):
-        if node.value == value:
-            found = True
-        else:
-            prev = Node
-            node = node.pointer
+        prev = None
+        node = self.head
+        found = False
+
+        while node and not found:
+
+            if node.value == value:
+                found = True
+            else:
+                prev = Node
+                node = node.pointer
 
         return node, prev, found
     
@@ -55,6 +61,6 @@ class LinkedListLIFO(object):
         else:
             print(f"인덱스 {index}에 해당하는 노드가 없습니다.")
 
-        
+    
     
         
