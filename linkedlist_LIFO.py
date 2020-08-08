@@ -26,3 +26,35 @@ class LinkedListLIFO(object):
     def _add(self, value):
         self.length += 1
         self.head = Node(value, self.head)
+
+    def _find(self, index):
+        prev = None
+        node = self.head
+        i = 0
+        while node and i < index:
+            prev = node
+            node = node.pointer
+            i += 1
+        return node, prev, i
+
+    # 값으로 노드를 찾는다.
+    def _find_by_value(self, value):
+        if node.value == value:
+            found = True
+        else:
+            prev = Node
+            node = node.pointer
+
+        return node, prev, found
+    
+    #인덱스에 해당하는 노드를 찾아서 삭제한다. 
+    def deleteNode(self, index):
+        node, prev i = self._find(index)
+        if index == i:
+            self._delete(prev, node)
+        else:
+            print(f"인덱스 {index}에 해당하는 노드가 없습니다.")
+
+        
+    
+        
