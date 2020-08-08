@@ -49,7 +49,7 @@ class LinkedListLIFO(object):
     
     #인덱스에 해당하는 노드를 찾아서 삭제한다. 
     def deleteNode(self, index):
-        node, prev i = self._find(index)
+        node, prev, i = self._find(index)
         if index == i:
             self._delete(prev, node)
         else:
