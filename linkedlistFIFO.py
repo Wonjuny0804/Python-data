@@ -54,3 +54,16 @@ class LinkedListFIFO(object):
             node = node.pointer
             i += 1
         return node, prev, i
+
+    # find node by value
+    def _find_by_value(self, value):
+        prev = None
+        node = self.head
+        found = False
+        while node and not found:
+            if node.value == value:
+                found = True
+            else:
+                prev = node
+                node = node.pointer
+        return node, prev, found
