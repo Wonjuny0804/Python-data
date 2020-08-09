@@ -28,4 +28,29 @@ class LinkedListFIFO(object):
         self.tail = None
         print(" Linked-List is empty.")
 
+    # add new node, if there is tail the tail directs to the new node
+    def _add(self, value):
+        self.length += 1
+        node = Node(value)
+        if self.tail:
+            self.tail.pointer = node
+        self.tail = node
     
+    # add new node
+    def addNode(self, value):
+        if not self.head:
+            self._addFirst(value)
+        else:
+            self._add(value)
+
+    # find node by index
+    def _find(self, index):
+        prev = None
+        node = self.head
+        i = 0
+
+        while node and i < index:
+            prev = node
+            node = node.pointer
+            i += 1
+        return node, prev, i
