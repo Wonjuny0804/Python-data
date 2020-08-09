@@ -83,3 +83,21 @@ class LinkedListFIFO(object):
                     prev.pointer = node.pointer
             else:
                 print("index {0} does not exist.".format(index))
+
+    # delete node according to value
+    def deleteNodeByValue(self, value):
+        if not self.head or not self.head.pointer:
+            self._deleteFirst()
+        else:
+            node, prev, i = self._find_by_value(value)
+            if node and node.value == value:
+                self.length -= 1
+                if i == 0 or not prev :
+                    self.head = node.pointer
+                    self.tail = node.pointer
+                else:
+                    prev.pointer = node.pointer
+            else:
+                print("value {} does not exist.".format(value))
+
+        
