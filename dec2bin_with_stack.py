@@ -7,7 +7,7 @@ def dec2bin_with_stack(decnum):
 
     while decnum > 0:
         dig = decnum % 2
-        decnum = dec // 2
+        decnum = decnum // 2
         s.push(dig)
 
 
