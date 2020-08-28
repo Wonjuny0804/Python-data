@@ -1,7 +1,7 @@
 from stack import Stack
 
 class SetOfStacks(Stack):
-    def __init__(self, camacity=4):
+    def __init__(self, capacity=4):
         self.setofstacks = []
         self.items = []
         self.capacity = capacity
