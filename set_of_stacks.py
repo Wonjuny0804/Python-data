@@ -20,6 +20,9 @@ class SetOfStacks(Stack):
         return value
     
     def sizeStack(self):
+        return len(self.satofstacks) * self.capacity + self.size()
+
+    def __repr__(self):
         aux = []
         for s in self.setofstacks:
             aux.extend(s)
