@@ -5,3 +5,16 @@ class DNode(object):
         self.value = value
         self.pointer = pointer
         self.previous = previous
+
+class DLinkedList(LinkedListFIFO):
+    def printListInverse(self):
+        node = self.tail
+        while node:
+            print(node.value, end=" ")
+            try:
+                node = node.previous
+            except AttributeError:
+                break
+        print()
+
+    
