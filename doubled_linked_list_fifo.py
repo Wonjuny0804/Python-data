@@ -17,4 +17,12 @@ class DLinkedList(LinkedListFIFO):
                 break
         print()
 
+    def _add(self, value):
+        self.length += 1
+        node = DNode(value)
+        if self.tail:
+            self.tail.pointer = node
+            node.previous = self.tail
+        self.tail = node
+    
     
