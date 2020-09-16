@@ -25,4 +25,10 @@ class DLinkedList(LinkedListFIFO):
             node.previous = self.tail
         self.tail = node
     
+    def _delete(self, node):
+        self.length -= 1
+        node.previous.pointer = node.pointer
+        if not node.pointer:
+            self.tail = node.previous
+
     
