@@ -16,23 +16,17 @@ BBB
 AAA
 """
 NumOfLines = 0
-
+content = ["AAA","BBB","CCC", "DDD", "EEE"]
 with open("abc.txt", "w") as f:
-    f.write("AAA\n")
-    f.write("BBB\n")
-    f.write("CCC\n")
-    f.write("DDD\n")
-    f.write("EEE\n")
+    for c in content:
+        f.write(c)
 
 with open("abc.txt", "r") as b:
     content = b.readlines()
-    
-    for c in content:
-        NumOfLines += 1
-print(NumOfLines)
-print(content)
-content = content[::-1]
-print(content)
+
+    print(content)
+    content = content[::-1]
+
 with open("abc.txt", "w") as f:
     for c in content:
         f.write(c)
