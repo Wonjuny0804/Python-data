@@ -15,3 +15,8 @@ print(a)
 b = [1, 2, 3]
 b.extend([4, 5])
 print(b)
+# what would be the difference between those two?
+# '+' and 'extend'?
+# extend() : Lterates over its arguement and adding each element to 
+# the list and extending the list. The length of the list increases by 
+# number of elements in it's argument. 
