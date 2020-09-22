@@ -10,3 +10,6 @@ Output: 1.59
 """
 number=eval(input())
 print("%.2f" % number)
+
+# print("%()" % something)
+# 
