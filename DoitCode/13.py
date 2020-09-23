@@ -6,17 +6,16 @@ when even numbers "*"
 """
 def DashInsert(numbers):
 
-    lst = numbers
+    end = numbers
 
-    for now in range(1,len(numbers)):
-        if int(numbers[now]) % 2 == int(numbers[now-1]) % 2:
-            if int(numbers[now]) % 2 == 1:
-                lst = lst[:now] + "-" + lst[now:]
+    for i in range(0, len(end)-1):
+        if int(end[i]) % 2 == int(end[i+1]) % 2:
+            front = end[:i+1]
+            if int(end[i]) % 2 == 1:
+                front = front + "-"
             else:
-                lst = lst[:now] + "*" + lst[now:]
-        numbers = lst
-    return lst
-
+                front = front + "*"
+            end = end[i+1:]
 haha = "4546793"
 print(DashInsert(haha))
 
