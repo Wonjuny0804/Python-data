@@ -21,3 +21,8 @@ def DashInsert(data):
     return "".join(result)
 
 print(DashInsert("4546793"))
+
+"""
+이 알고리즘은 왜 먹히는가?
+그렇다면 이 알고리즘에서 사용하고 있는 줄을 하나하나 분석해보자.
+numbers = list(map(int, data))는 무슨 뜻인가?
