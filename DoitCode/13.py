@@ -6,16 +6,24 @@ when even numbers "*"
 """
 def DashInsert(numbers):
 
-    end = numbers
 
-    for i in range(0, len(end)-1):
-        if int(end[i]) % 2 == int(end[i+1]) % 2:
-            front = end[:i+1]
-            if int(end[i]) % 2 == 1:
-                front = front + "-"
-            else:
-                front = front + "*"
-            end = end[i+1:]
+    while divide(numbers) == 0,__:
+
+
+def divide(numbers):
+    if len(numbers) == 1:
+        return 0
+    for i in range(1, len(numbers)):
+        if int(numbers[i-1) % 2 == int(numbers[i]) % 2:
+            result = numbers[:i]
+            if int(numbers[i-1]) % 2 == 1: # when ti's odd number
+                result += "-"
+                break
+            else: # when even number
+                result += "*"
+                break
+        
+    return result, numbers[i:]
 haha = "4546793"
 print(DashInsert(haha))
 
