@@ -15,13 +15,13 @@ while True:
     
     if guess > randomnumber:
         highest = guess
-        print("your guess higher go lower")
-        print("Please guess a number between ",lowest,":",highest)
+        print("your guess is higher. Go lower")
+        print("Please guess a number between ",lowest,"and",highest)
         guess = int(input())
     elif guess < randomnumber:
         lowest = guess
-        print("your guess is lower go higher")
-        print("Please guess a number between",lowest,":",highest)
+        print("your guess is lower. Go higher")
+        print("Please guess a number between",lowest,"and",highest)
         guess = int(input())
     else:
         break
