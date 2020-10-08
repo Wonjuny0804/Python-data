@@ -9,5 +9,14 @@
 출력한다.
 
 """
-first, second = input().split(".")
-print(first+"\n"+second)
+#first, second = input().split(".")
+#print(first+"\n"+second)
+
+number = float(input())
+print(number)
+if number > 1:
+    pass
+elif number == 1:
+    pass
+else:
+    pass
