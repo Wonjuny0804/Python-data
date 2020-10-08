@@ -14,9 +14,11 @@
 
 number = float(input())
 print(number)
-if number > 1:
-    pass
-elif number == 1:
-    pass
+if number < 1:
+    print("0\n")
+    print(number)
+elif number == 1 or number == 0:
+    print(number)
 else:
-    pass
+    if "." in str(number):
+        tmp=str(number).split(".")
