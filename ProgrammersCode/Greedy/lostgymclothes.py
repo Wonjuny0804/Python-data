@@ -21,6 +21,6 @@ def solution(n, lost, reserve):
     for i in range(0,len(total)):
         if total[i] == 0:
             if total[i-1]==2 or total[i+1]==2:
-                
+                pass
 
     return answer
