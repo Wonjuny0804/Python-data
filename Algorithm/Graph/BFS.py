@@ -25,3 +25,4 @@ graph['H'] = ['C']
 graph['I'] = ['C', 'J']
 graph['J'] = ['I']
 print(BFS(graph, 'A'))
+print(graph)
